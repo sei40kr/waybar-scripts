@@ -18,7 +18,7 @@ Show the current track of MPRIS.
     "format-icons": {
       "stopped": "",
       "playing": "▶ ",
-      "paused" = "⏸ "
+      "paused": "⏸ "
     },
     "tooltip": false,
     "escape": true
