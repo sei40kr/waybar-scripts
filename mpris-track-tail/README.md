@@ -1,4 +1,4 @@
-# mpris-currently-playing-tail
+# mpris-track-tail
 
 Show the current track of MPRIS.
 
@@ -11,8 +11,8 @@ Show the current track of MPRIS.
 
 ```json
 {
-  "custom/mpris-currently-playing": {
-    "exec": "/path/to/waybar-scripts/mpris-currently-playing-tail/mpris-currently-playing-tail.bash",
+  "custom/mpris-track": {
+    "exec": "/path/to/waybar-scripts/mpris-track-tail/mpris-track-tail.bash",
     "return-type": "json",
     "format": "{icon}{}",
     "format-icons": {
