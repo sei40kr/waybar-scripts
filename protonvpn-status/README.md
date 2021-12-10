@@ -49,7 +49,7 @@ Show the status of ProtonVPN.
 
 ### Example
 
-| State          | Output    | Tooltip              |
+| State          | Text      | Tooltip              |
 | :------------- | :-------- | :------------------- |
 | `disconnected` | (nothing) | `Disconnected`       |
 | `connected`    | `🛡 JP#01` | `Connected to JP#01` |

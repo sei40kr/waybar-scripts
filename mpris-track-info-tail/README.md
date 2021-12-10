@@ -28,8 +28,8 @@ Show the current track of MPRIS.
 
 ## Example
 
-| State     | Output             |
-|:----------|:-------------------|
+| State     | Text               |
+| :-------- | :----------------- |
 | `stopped` | (nothing)          |
 | `playing` | `▶ Title — Artist` |
 | `paused`  | `⏸ Title — Artist` |

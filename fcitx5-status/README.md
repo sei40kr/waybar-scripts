@@ -22,7 +22,7 @@ Show the status of Fcitx 5.
 
 ## Example
 
-| State      | Output    |
+| State      | Text      |
 | :--------- | :-------- |
 | `close`    | (nothing) |
 | `inactive` | `Aa`      |

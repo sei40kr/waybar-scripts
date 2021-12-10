@@ -32,7 +32,7 @@ Show the timer of GNOME Pomodoro.
 
 ## Example
 
-| State         | Output     |
+| State         | Text       |
 | :------------ | :--------- |
 | `null`        | (nothing)  |
 | `pomodoro`    | `🕓 25:00` |
