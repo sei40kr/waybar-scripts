@@ -25,6 +25,6 @@ let
 in pkgs.mkShell {
   buildInputs = with pkgs; [ waybar bash playerctl ];
   shellHook = ''
-    exec waybar -c ${waybarConfig}/etc/xdg/waybar/config
+    exec waybar -c ${waybarConfig}/etc/xdg/waybar/config -s /dev/null
   '';
 }
