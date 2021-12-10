@@ -6,7 +6,7 @@ let
     name = "config";
     destination = "/etc/xdg/waybar/config";
     text = builtins.toJSON {
-      height = 48;
+      height = 32;
       modules-center = [ "custom/mpris-track" ];
       "custom/mpris-track" = {
         exec = "${waybar-scripts}/mpris-track-tail/mpris-track-tail.bash";
