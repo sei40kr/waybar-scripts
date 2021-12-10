@@ -10,7 +10,7 @@ Show the status of ProtonVPN.
 
 ## Module
 
-### Icon and text
+### Icon + Text
 
 ```json
 {
@@ -29,7 +29,7 @@ Show the status of ProtonVPN.
 }
 ```
 
-### Icon only
+### Icon Only
 
 ```json
 {
