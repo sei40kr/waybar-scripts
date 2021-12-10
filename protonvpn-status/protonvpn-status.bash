@@ -2,4 +2,13 @@
 
 protonvpn status | awk '/^Status:/ { status = tolower($2) }
   /^Server:/ { server = $2 }
-  END { printf "{\"text\":\"%s\",\"alt\":\"%s\",\"class\":\"%s\"}", server, status, status }'
+  END { printf "%s\n%s\n", status, server }' | {
+  read -r status
+  read -r server
+  if [[ "$status" == 'connected' ]]; then
+    tooltip="Connected to ${server}"
+  else
+    tooltip='Disconnected'
+  fi
+  echo "{\"text\":\"${server}\",\"alt\":\"${status}\",\"class\":\"${status}\",\"tooltip\":\"${tooltip}\"}"
+}
