@@ -26,6 +26,12 @@ Show the current track of MPRIS.
 }
 ```
 
+## Environment Variables
+
+| Variable    | Text                                                                                                 |
+| :---------- | :--------------------------------------------------------------------------------------------------- |
+| `SEPARATOR` | A separator between the track title and the artist name. If omitted, the artist name won't be shown. |
+
 ## Example
 
 | State     | Text               |
