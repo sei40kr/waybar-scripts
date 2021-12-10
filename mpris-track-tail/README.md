@@ -12,7 +12,7 @@ Show the current track of MPRIS.
 ```json
 {
   "custom/mpris-track": {
-    "exec": "/path/to/waybar-scripts/mpris-track-tail/mpris-track-tail.bash",
+    "exec": "SEPARATOR=' — ' /path/to/waybar-scripts/mpris-track-tail/mpris-track-tail.bash",
     "return-type": "json",
     "format": "{icon}{}",
     "format-icons": {
@@ -28,8 +28,8 @@ Show the current track of MPRIS.
 
 ## Example
 
-| State     | Output    |
-| :-------- | :-------- |
-| `stopped` | (nothing) |
-| `playing` | `▶ Title` |
-| `paused`  | `⏸ Title` |
+| State     | Output             |
+|:----------|:-------------------|
+| `stopped` | (nothing)          |
+| `playing` | `▶ Title — Artist` |
+| `paused`  | `⏸ Title — Artist` |

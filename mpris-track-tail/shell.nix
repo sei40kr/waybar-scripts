@@ -9,7 +9,8 @@ let
       height = 32;
       modules-center = [ "custom/mpris-track" ];
       "custom/mpris-track" = {
-        exec = "${waybar-scripts}/mpris-track-tail/mpris-track-tail.bash";
+        exec =
+          "SEPARATOR=' — ' ${waybar-scripts}/mpris-track-tail/mpris-track-tail.bash";
         return-type = "json";
         format = "{icon}{}";
         format-icons = {

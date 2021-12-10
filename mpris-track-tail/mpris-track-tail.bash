@@ -4,6 +4,11 @@ playerctl -Fs status | while read -r status; do
   if [[ "$status" == 'Stopped' ]]; then
     echo '{"alt":"stopped","class":"stopped"}'
   else
-    playerctl -f '{"text":"{{title}}","alt":"{{lc(status)}}","class":"{{lc(status)}}"}' -s metadata
+    playerctl -f $'{{lc(status)}}\n{{title}}\n{{artist}}' -s metadata | {
+      read -r status
+      read -r title
+      read -r artist
+      echo "{\"text\":\"${title}${artist:+${SEPARATOR}${artist}}\",\"alt\":\"${status}\",\"class\":\"${status}\"}"
+    }
   fi
 done
