@@ -7,10 +7,10 @@ let
     destination = "/etc/xdg/waybar/config";
     text = builtins.toJSON {
       height = 32;
-      modules-center = [ "custom/mpris-track" ];
-      "custom/mpris-track" = {
+      modules-center = [ "custom/mpris-track-info" ];
+      "custom/mpris-track-info" = {
         exec =
-          "SEPARATOR=' — ' ${waybar-scripts}/mpris-track-tail/mpris-track-tail.bash";
+          "SEPARATOR=' — ' ${waybar-scripts}/mpris-track-info-tail/mpris-track-info-tail.bash";
         return-type = "json";
         format = "{icon}{}";
         format-icons = {

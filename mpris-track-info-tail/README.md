@@ -1,4 +1,4 @@
-# mpris-track-tail
+# mpris-track-info-tail
 
 Show the current track of MPRIS.
 
@@ -11,8 +11,8 @@ Show the current track of MPRIS.
 
 ```json
 {
-  "custom/mpris-track": {
-    "exec": "SEPARATOR=' — ' /path/to/waybar-scripts/mpris-track-tail/mpris-track-tail.bash",
+  "custom/mpris-track-info": {
+    "exec": "SEPARATOR=' — ' /path/to/waybar-scripts/mpris-track-info-tail/mpris-track-info-tail.bash",
     "return-type": "json",
     "format": "{icon}{}",
     "format-icons": {
