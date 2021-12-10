@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 playerctl -Fs status | while read -r status; do
-  if [[ "$status" != 'Stopped' ]]; then
+  if [[ "$status" == 'Stopped' ]]; then
+    echo '{"alt":"stopped","class":"stopped"}'
+  else
     playerctl -f '{"text":"{{title}}","alt":"{{lc(status)}}","class":"{{lc(status)}}"}' -s metadata
   fi
 done
