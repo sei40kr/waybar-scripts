@@ -1,9 +1,9 @@
 { pkgs ? import <nixpkgs> { } }:
 
 let
-  waybarLib = import ../lib/demo.nix { inherit pkgs; };
+  demoLib = import ../lib/demo.nix { inherit pkgs; };
   waybar-scripts = ./..;
-  waybar-start = waybarLib.mkDemo {
+  waybar-start = demoLib.mkDemo {
     config = {
       modules-center =
         [ "custom/protonvpn-status" "custom/protonvpn-status-icon-only" ];
