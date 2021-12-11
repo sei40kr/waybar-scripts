@@ -1,12 +1,10 @@
 { pkgs ? import <nixpkgs> { } }:
 
 let
+  waybarLib = import ../lib/demo.nix { inherit pkgs; };
   waybar-scripts = ./..;
-  waybarConfig = pkgs.writeTextFile {
-    name = "config";
-    destination = "/etc/xdg/waybar/config";
-    text = builtins.toJSON {
-      height = 32;
+  waybar-start = waybarLib.mkDemo {
+    config = {
       modules-center =
         [ "custom/protonvpn-status" "custom/protonvpn-status-icon-only" ];
       "custom/protonvpn-status" = {
@@ -33,11 +31,7 @@ let
         escape = true;
       };
     };
-  };
-  waybarStyle = pkgs.writeTextFile {
-    name = "style.css";
-    destination = "/etc/xdg/waybar/style.css";
-    text = ''
+    style = ''
       #custom-protonvpn-status,
       #custom-protonvpn-status-icon-only {
         margin: 0 8px;
@@ -45,9 +39,8 @@ let
     '';
   };
 in pkgs.mkShell {
-  buildInputs = with pkgs; [ waybar protonvpn-cli ];
+  buildInputs = with pkgs; [ protonvpn-cli ];
   shellHook = ''
-    exec waybar -c ${waybarConfig}/etc/xdg/waybar/config \
-      -s ${waybarStyle}/etc/xdg/waybar/style.css
+    exec ${waybar-start}/bin/waybar-start
   '';
 }

@@ -1,12 +1,10 @@
 { pkgs ? import <nixpkgs> { } }:
 
 let
+  waybarLib = import ../lib/demo.nix { inherit pkgs; };
   waybar-scripts = ./..;
-  waybarConfig = pkgs.writeTextFile {
-    name = "config";
-    destination = "/etc/xdg/waybar/config";
-    text = builtins.toJSON {
-      height = 32;
+  waybar-start = waybarLib.mkDemo {
+    config = {
       modules-center = [ "custom/mpris-track-info" ];
       "custom/mpris-track-info" = {
         exec =
@@ -24,8 +22,8 @@ let
     };
   };
 in pkgs.mkShell {
-  buildInputs = with pkgs; [ waybar bash playerctl ];
+  buildInputs = with pkgs; [ bash playerctl ];
   shellHook = ''
-    exec waybar -c ${waybarConfig}/etc/xdg/waybar/config -s /dev/null
+    exec ${waybar-start}/bin/waybar-start
   '';
 }
