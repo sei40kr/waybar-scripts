@@ -21,6 +21,7 @@ let
           playing = "⏮";
           paused = "⏮";
         };
+        tooltip = false;
         on-click = "playerctl previous";
       };
       "custom/mpris-play-pause" = {
@@ -32,6 +33,7 @@ let
           playing = "⏸";
           paused = "▶";
         };
+        tooltip = false;
         on-click = "playerctl play-pause";
       };
       "custom/mpris-next" = {
@@ -43,6 +45,7 @@ let
           playing = "⏭";
           paused = "⏭";
         };
+        tooltip = false;
         on-click = "playerctl next";
       };
     };

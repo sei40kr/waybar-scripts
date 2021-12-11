@@ -20,6 +20,7 @@ Just show the current status of MPRIS.
       "playing": "⏮",
       "paused": "⏮"
     },
+    "tooltip": false,
     "on-click": "playerctl previous"
   },
   "custom/mpris-play-pause": {
@@ -31,6 +32,7 @@ Just show the current status of MPRIS.
       "playing": "⏸",
       "paused": "▶"
     },
+    "tooltip": false,
     "on-click": "playerctl play-pause"
   },
   "custom/mpris-next": {
@@ -42,6 +44,7 @@ Just show the current status of MPRIS.
       "playing": "⏭",
       "paused": "⏭"
     },
+    "tooltip": false,
     "on-click": "playerctl next"
   }
 }
