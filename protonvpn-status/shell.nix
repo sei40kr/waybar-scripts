@@ -6,7 +6,7 @@ let
   waybar-start = demoLib.mkDemo {
     config = {
       modules-center =
-        [ "custom/protonvpn-status" "custom/protonvpn-status-icon-only" ];
+        [ "custom/protonvpn-status" "custom/protonvpn-status-icon" ];
       "custom/protonvpn-status" = {
         exec = "${waybar-scripts}/protonvpn-status/protonvpn-status.bash";
         return-type = "json";
@@ -19,7 +19,7 @@ let
         tooltip = false;
         escape = true;
       };
-      "custom/protonvpn-status-icon-only" = {
+      "custom/protonvpn-status-icon" = {
         exec = "${waybar-scripts}/protonvpn-status/protonvpn-status.bash";
         return-type = "json";
         interval = 5;
@@ -33,7 +33,7 @@ let
     };
     style = ''
       #custom-protonvpn-status,
-      #custom-protonvpn-status-icon-only {
+      #custom-protonvpn-status-icon {
         margin: 0 8px;
       }
     '';
