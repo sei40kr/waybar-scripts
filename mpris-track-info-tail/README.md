@@ -1,6 +1,6 @@
 # mpris-track-info-tail
 
-Show the current track of MPRIS.
+Show the information of current MPRIS track.
 
 ## Dependencies
 
